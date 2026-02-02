@@ -33,6 +33,7 @@ def flux_submit_batch(
     environment: List[str] = None,
     time_limit: str = None,
     debug: bool = False,
+    queue: str = None,
 ):
     """
     Submits a batch job to Flux using flux-batch
@@ -69,6 +70,7 @@ def flux_submit_batch(
             job_name=job_name,
             env=environment,
             logs_dir=logs_dir,
+            queue=queue,
         )
 
         # Add prolog, epilogs, modules, and services
